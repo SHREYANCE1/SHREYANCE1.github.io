@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>Singularity Automation</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+        <meta name="viewport" content="width = device-width", initial-scale = 1.0 , user-scalable=no>
+    </head>
+    <body>
+        
+        <div class="row rowTab">
+                <div class="column second">
+                    <div class="item">
+                        UTC date
+                        <br><span id="utc_date"></span>
+                    </div>
+                    <div class="item">
+                        UTC time
+                        <br><span id="utc_time"></span>
+                    </div>
+                    <div class="item">
+                        UNIX time
+                        <br><span id="unix_time"></span>
+                    </div>
+                    <div class="item">
+                            Convert seconds
+                            <br>
+                        <div class="mdc-text-field">
+                             <input type="text" id="seconds" class="mdc-text-field__input">
+                            <div class="mdc-line-ripple"></div>
+                        </div>
+                    
+                    </div>
+                    <div class="item">
+                            to UTC time & date
+                            <br>
+                            <div class="mdc-text-field">
+                                <input type="text" id="utc_date_time" class="mdc-text-field__input" readonly>
+                                <div class="mdc-line-ripple"></div>
+                                </div>
+                    </div>
+                    <div class="item">
+                           to local time & date
+                            <br>
+                            <div class="mdc-text-field">
+                                <input type="text" id="local_date_time" class="mdc-text-field__input" readonly>
+                                <div class="mdc-line-ripple"></div>
+                                </div>
+                    </div>
+                </div>
+                <div class="column full">
+                    <div class="item">
+                        <a class="bigText">
+                            current
+                            <img src="./milli.png" class="img">
+                            seconds
+                        </a>
+                    </div>
+                    <div class="item bigDigit">
+                        <span id="millis"></span>
+                    </div>
+                    <div class="item quote">
+                     <br><span id="utc-vs-gmt-complex" class="text"></span>
+                    </div>
+                </div>
+                <div class="column third">
+                    <div class="item">
+                        local date
+                        <br><span id="local_date"></span>
+                    </div>
+                    <div class="item">
+                        local time
+                        <br><span id="local_time"></span>
+                    </div>
+                    <div class="item">
+                        local timezone (UTC-8h)
+                        <br><span id="local_timezone"></span>
+                    </div>
+                    <div class="item">
+                            Convert local YYYY / MM / DD
+                            <div class="rowSmall">
+                                <div class="mdc-text-field small">
+                                    <input type="text" id="local-year" class="mdc-text-field__input">
+                                </div>
+                                <div class="mdc-text-field small">
+                                    <input type="text" id="local-month" class="mdc-text-field__input" maxlength="2">
+                                </div>
+                                <div class="mdc-text-field small">
+                                    <input type="text" id="local-day" class="mdc-text-field__input" maxlength="2">
+                                </div>
+                            </div>
+                    </div>
+                    <div class="item">
+                            and HH : MM : SS
+                            <div class="rowSmall">
+                                <div class="mdc-text-field small">
+                                    <input type="text" id="local-hour" class="mdc-text-field__input" maxlength="2">
+                                </div>
+                                <div class="mdc-text-field small">
+                                    <input type="text" id="local-minutes" class="mdc-text-field__input" maxlength="2"> 
+                                </div>
+                                <div class="mdc-text-field small">
+                                    <input type="text" id="local-seconds" class="mdc-text-field__input" maxlength="2">
+                                </div>
+                            </div>
+                    </div>
+                    <div class="item">
+                            to seconds since epoch
+                            <br>
+                            <div class="mdc-text-field">
+                                    <input type="text" id="milli-since-epoch" class="mdc-text-field__input" readonly>
+                                    <div class="mdc-line-ripple"></div>
+                            </div>
+                            
+                    </div>
+                </div>
+        </div>
+        <div class="footer">
+            &copy; shreyance 2019
+        </div>
+
+        
+        <script src="moment.min.js"></script>
+        <script src="moment-timezone-with-data-2012-2022.min.js"></script>
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <script src="index.js"></script>
+        <script src="consts.js"></script>
+        <!-- all the static text used can be imported dynamically from a js file where these will be declared as string constants -->
+    </body>
+</html>
