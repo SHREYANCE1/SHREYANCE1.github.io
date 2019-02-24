@@ -1,4 +1,3 @@
-# SHREYANCE1.github.io
 Assignment_Singularity_Automation
 
 1) The website is made using the material web components form the given repo https://github.com/material-components/material-components-web/, instead of normal input fields and design. 
